@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title("The Weather for the Next Days")
 place = st.text_input("Place: ")
-days = st.slider("Forecast Days", min_values=1, max_value=5,
+days = st.slider("Forecast Days", min_value=1, max_value=5,
                  help="Select the number of forcast days.")
 option = st.selectbox("Select data to view",
                       "Temperature", "Sky")
