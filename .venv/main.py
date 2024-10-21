@@ -12,6 +12,7 @@ st.subheader(f"{option} for the next {days} days in {place}")
 
 dates = ["2022-25-10", "2022-25-11", "2022-25-12"]
 temperatures = [10, 11, 15]
+temperatures = [days * i for i in temperatures]
 
 figure = px.line(x=dates, y=temperatures, labels={"x": "dates", "y": "temperature (C)"})
 st.plotly_chart(figure)
